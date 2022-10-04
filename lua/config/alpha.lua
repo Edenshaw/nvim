@@ -9,23 +9,22 @@ function M.setup()
   local dashboard = require "alpha.themes.dashboard"
   local function header()
     return {
-[[            dddddddd                                                        ]],
-[[            d::::::d                          iiii                          ]],
-[[            d::::::d                         i::::i                         ]],
-[[            d::::::d                          iiii                          ]],
-[[            d:::::d                                                         ]],
-[[    ddddddddd:::::dvvvvvvv           vvvvvvviiiiiii    mmmmmmm    mmmmmmm   ]],
-[[  dd::::::::::::::d v:::::v         v:::::v i:::::i  mm:::::::m  m:::::::mm ]],
-[[ d::::::::::::::::d  v:::::v       v:::::v   i::::i m::::::::::mm::::::::::m]],
-[[d:::::::ddddd:::::d   v:::::v     v:::::v    i::::i m::::::::::::::::::::::m]],
-[[d::::::d    d:::::d    v:::::v   v:::::v     i::::i m:::::mmm::::::mmm:::::m]],
-[[d:::::d     d:::::d     v:::::v v:::::v      i::::i m::::m   m::::m   m::::m]],
-[[d:::::d     d:::::d      v:::::v:::::v       i::::i m::::m   m::::m   m::::m]],
-[[d:::::d     d:::::d       v:::::::::v        i::::i m::::m   m::::m   m::::m]],
-[[d::::::ddddd::::::dd       v:::::::v        i::::::im::::m   m::::m   m::::m]],
-[[ d:::::::::::::::::d        v:::::v         i::::::im::::m   m::::m   m::::m]],
-[[  d:::::::::ddd::::d         v:::v          i::::::im::::m   m::::m   m::::m]],
-[[   ddddddddd   ddddd          vvv           iiiiiiiimmmmmm   mmmmmm   mmmmmm]],
+[[                                               iiii                          ]],
+[[                                              i::::i                         ]],
+[[                                               iiii                          ]],
+[[                                                                             ]],
+[[xxxxxxx      xxxxxxxvvvvvvv           vvvvvvviiiiiii    mmmmmmm    mmmmmmm   ]],
+[[ x:::::x    x:::::x  v:::::v         v:::::v i:::::i  mm:::::::m  m:::::::mm ]],
+[[  x:::::x  x:::::x    v:::::v       v:::::v   i::::i m::::::::::mm::::::::::m]],
+[[   x:::::xx:::::x      v:::::v     v:::::v    i::::i m::::::::::::::::::::::m]],
+[[    x::::::::::x        v:::::v   v:::::v     i::::i m:::::mmm::::::mmm:::::m]],
+[[     x::::::::x          v:::::v v:::::v      i::::i m::::m   m::::m   m::::m]],
+[[     x::::::::x           v:::::v:::::v       i::::i m::::m   m::::m   m::::m]],
+[[    x::::::::::x           v:::::::::v        i::::i m::::m   m::::m   m::::m]],
+[[   x:::::xx:::::x           v:::::::v        i::::::im::::m   m::::m   m::::m]],
+[[  x:::::x  x:::::x           v:::::v         i::::::im::::m   m::::m   m::::m]],
+[[ x:::::x    x:::::x           v:::v          i::::::im::::m   m::::m   m::::m]],
+[[xxxxxxx      xxxxxxx           vvv           iiiiiiiimmmmmm   mmmmmm   mmmmmm]],
    }
   end
 
@@ -34,7 +33,7 @@ function M.setup()
   dashboard.section.buttons.val = {
     dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
     dashboard.button("c", "  Configuration", ":e $MYVIMRC <CR>"),
-    dashboard.button("q", "  Quit Neovim", ":qa<CR>"),
+    dashboard.button("q", "  Quit xvim", ":qa<CR>"),
   }
 
   local function footer()
