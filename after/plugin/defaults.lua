@@ -20,6 +20,7 @@ opt.updatetime = 250 --Decrease update time
 opt.signcolumn = "yes" -- Always show sign column
 opt.clipboard = "unnamedplus" -- Access system clipboard
 opt.timeoutlen = 100 -- Time in milliseconds to wait for a mapped sequence to complete
+opt.showmode = false 
 
 -- Highlight on yank
 vim.cmd [[
@@ -28,3 +29,11 @@ vim.cmd [[
     autocmd TextYankPost * silent! lua vim.highlight.on_yank()
   augroup end
 ]]
+
+-- Better search
+opt.path:remove "/usr/include"
+opt.path:append "**"
+-- vim.cmd [[set path=.,,,$PWD/**]] -- Set the path directly
+
+opt.wildignorecase = true
+opt.wildignore:append "**/.git/*"

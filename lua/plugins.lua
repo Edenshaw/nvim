@@ -136,6 +136,27 @@ use {
       cmd = { "MarkdownPreview" },
     }
 
+    -- Treesitter
+    use {
+      "nvim-treesitter/nvim-treesitter",
+      opt = true,
+      event = "BufRead",
+      run = ":TSUpdate",
+      config = function()
+        require("config.treesitter").setup()
+      end,
+    }
+
+    -- FZF
+    use { "junegunn/fzf", run = "./install --all", event = "VimEnter" } -- You don't need to install this if you already have fzf installed
+    use { "junegunn/fzf.vim", event = "BufEnter" }
+
+    -- FZF Lua
+    use {
+      "ibhagwan/fzf-lua",
+      event = "BufEnter",
+      requires = { "kyazdani42/nvim-web-devicons" },
+    }
 
     if packer_bootstrap then
       print "Restart Neovim required after installation!"
