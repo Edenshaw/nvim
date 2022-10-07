@@ -170,6 +170,33 @@ use {
         end,
     }
 
+-- Dressing    
+use {
+  "stevearc/dressing.nvim",
+  event = "BufEnter",
+  config = function()
+    require("dressing").setup {
+      select = {
+        backend = { "telescope", "fzf", "builtin" },
+      },
+    }
+  end,
+}
+
+    -- Telescope
+    use { "nvim-telescope/telescope.nvim", module = "telescope", as = "telescope" }
+
+-- Buffer line
+use {
+  "akinsho/nvim-bufferline.lua",
+  event = "BufReadPre",
+  wants = "nvim-web-devicons",
+  config = function()
+    require("config.bufferline").setup()
+  end,
+}
+
+
     if packer_bootstrap then
       print "Restart Neovim required after installation!"
       require("packer").sync()
