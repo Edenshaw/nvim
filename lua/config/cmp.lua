@@ -81,12 +81,15 @@ function M.setup()
       { name = "nvim_lua" },
       { name = "path" },
       { name = "spell" },
-      { name = "emoji" },
+      --{ name = "emoji" },
       { name = "calc" },
     },
-    documentation = {
-      border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
-      winhighlight = "NormalFloat:NormalFloat,FloatBorder:TelescopeBorder",
+
+    window = {
+      documentation = {
+        border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
+        winhighlight = "NormalFloat:NormalFloat,FloatBorder:TelescopeBorder",
+      }
     },
   }
 
@@ -102,7 +105,7 @@ function M.setup()
     sources = cmp.config.sources({
       { name = "path" },
     }, {
-      { name = "cmdline" },
+     { name = "cmdline" },
     }),
   })
 end

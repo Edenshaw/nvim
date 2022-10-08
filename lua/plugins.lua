@@ -199,24 +199,6 @@ use {
   end,
 }
 
-
--- Completion
-use {
-  "ms-jpq/coq_nvim",
-  branch = "coq",
-  event = "InsertEnter",
-  opt = true,
-  run = ":COQdeps",
-  config = function()
-    require("config.coq").setup()
-  end,
-  requires = {
-    { "ms-jpq/coq.artifacts", branch = "artifacts" },
-    { "ms-jpq/coq.thirdparty", branch = "3p", module = "coq_3p" },
-  },
-  disable = false,
-}
-
 use {
   "hrsh7th/nvim-cmp",
   event = "InsertEnter",
@@ -234,7 +216,7 @@ use {
     "saadparwaiz1/cmp_luasnip",
     "hrsh7th/cmp-calc",
     "f3fora/cmp-spell",
-    "hrsh7th/cmp-emoji",
+    --"hrsh7th/cmp-emoji",
     {
       "L3MON4D3/LuaSnip",
       wants = "friendly-snippets",
