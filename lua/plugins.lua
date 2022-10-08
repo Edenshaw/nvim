@@ -145,6 +145,9 @@ use {
       config = function()
         require("config.treesitter").setup()
       end,
+      requires = {
+        { "nvim-treesitter/nvim-treesitter-textobjects" },
+      },
     }
 
     -- FZF
@@ -171,17 +174,17 @@ use {
     }
 
 -- Dressing    
-use {
-  "stevearc/dressing.nvim",
-  event = "BufEnter",
-  config = function()
-    require("dressing").setup {
-      select = {
-        backend = { "telescope", "fzf", "builtin" },
-      },
-    }
-  end,
-}
+--use {
+--  "stevearc/dressing.nvim",
+--  event = "BufEnter",
+--  config = function()
+--    require("dressing").setup {
+--      select = {
+--        backend = { "telescope", "fzf", "builtin" },
+--      },
+--    }
+--  end,
+--}
 
     -- Telescope
     use { "nvim-telescope/telescope.nvim", module = "telescope", as = "telescope" }
